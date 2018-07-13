@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>動畫作業</title>
+    <style media="screen">
+		.box{
+			width: 500px;
+			height: 500px;
+			background-color: red;
+			position: relative;
+      margin: auto;
+			}
+		.inbox{
+      width: 220px;
+      height: 60px;
+      position: relative;
+      margin: auto;
+      top: 50%;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+    input[type="radio"]{
+      visibility: hidden;
+    }
+    label{
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border-radius:100%;
+      position: absolute;
+      border: 2px solid white;
+    }
+    .in{
+      width: 45px;
+      height: 45px;
+      border-radius:100%;
+      background:white;
+      position: absolute;
+      top:4px;
+      right: 5px;
+      bottom: 0;
+
+    }
+    #c1:checked ~ .in{
+      position:absolute;
+      transition: all 1s ease;
+      right: 60px:
+    }
+    #l2:checked ~ .in{
+      position: absolute;
+      right: 30px:
+      transition: all 1s ease;
+    }
+    #l3:checked ~ .in{
+      position: absolute;
+      right: 0:
+      transition: all 1s ease;
+    }
+    </style>
+  </head>
+  <body>
+	<div class="box">
+		<div class="inbox">
+      <label for="c1"></label>
+      <input type="radio" name="r" id="c1">
+      <label for="c2" id="l2"></label>
+      <input type="radio" name="r" id="c2">
+      <label for="c3" id="l3"></label>
+      <input type="radio" name="r" id="c3">
+      <div class="in"></div>
+		</div>
+	</div>
+  </body>
+</html>
