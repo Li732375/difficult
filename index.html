@@ -64,18 +64,17 @@
       margin: auto;
       top: 0;
       bottom: 0;
-      margin-left: 41%;
-      z-index: 2;
-      transition: margin-left .1s;
+      left: 41%;
+      transition: left 1s;
     }
-    #c1:checked + .incir{
-      margin-left: 7%;
+    #c1:checked ~ .incir{
+      left: 7%;
     }
-    #c2:checked + .incir{
-      margin-left: 41%;
+    #c2:checked ~ .incir{
+      left: 41%;
     }
-    #c3:checked + .incir{
-      margin-left: 74.5%%;
+    #c3:checked ~ .incir{
+      left: 74.5%;
     }
     </style>
   </head>
@@ -89,6 +88,7 @@
         <input type="radio" name="r" id="c2"/>
         <label for="c3"></label>
         <input type="radio" name="r" id="c3"/>
+
         <div class="incir"></div>
       </div>
       <div id="g" class="box"></div>
