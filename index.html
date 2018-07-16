@@ -10,22 +10,25 @@
       height: 400px;
       position: relative;
       overflow: hidden;
-/*      border: 2px solid blue;*/
       background-color: orange;
     }
     .box{
 			width: 400px;
       height: 400px;
 		}
-		#r{
+	  #r{
       background-color: red;
       float: left;
-      margin-left: -100%;
+      margin-left: -250%;
+      margin-top: -85%;
+      transition: margin-left 1s;
     }
     #g{
       background-color: green;
       float: left;
-      margin-left: 100%;
+      margin-left: 150%;
+      margin-top: -95%;
+      transition: margin-left 1s;
     }
 		.inbox{
       width: 200px;
@@ -36,7 +39,6 @@
       bottom: 0;
       right: 0;
       left: 0;
-/*      border: 2px solid blue;*/
     }
     input[type="radio"]{
       visibility: hidden;
@@ -70,18 +72,29 @@
     #c1:checked ~ .incir{
       left: 7%;
     }
+    #c1:checked ~ #r{
+      margin-left: -50%;
+    }
     #c2:checked ~ .incir{
       left: 41%;
     }
+/*    #c2:checked ~ {
+
+    }*/
     #c3:checked ~ .incir{
       left: 74.5%;
+    }
+    #c3:checked ~ #g{
+      margin-left: -50%;
     }
     </style>
   </head>
   <body>
     <div class="allbox">
-      <div id="r" class="box"></div>
+
       <div class="inbox">
+        <div id="r" class="box"></div>
+
         <label for="c1"></label>
         <input type="radio" name="r" id="c1"/>
         <label for="c2"></label>
@@ -90,8 +103,9 @@
         <input type="radio" name="r" id="c3"/>
 
         <div class="incir"></div>
+        <div id="g" class="box"></div>
       </div>
-      <div id="g" class="box"></div>
+
     </div>
   </body>
 </html>
